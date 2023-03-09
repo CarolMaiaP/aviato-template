@@ -1,5 +1,6 @@
 import { GiPhone } from 'react-icons/gi'
 import { SlBag } from 'react-icons/sl'
+import '../styles/header.scss'
 
 export function Header(){
   return(
