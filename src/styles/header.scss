@@ -1,0 +1,79 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem 4rem;
+  border-bottom: 1px solid #efecec;
+  width: 70%;
+  margin: 3rem auto 2rem;
+  padding-bottom: 3rem;
+
+  .contact {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: 1rem;
+
+    p {
+      font-weight: 300;
+    }
+  }
+
+  .logo {
+    h3 {
+      font-family: "Times New Roman", Times, serif;
+      text-transform: uppercase;
+      color: #333;
+      font-size: 1.4rem;
+      letter-spacing: 0.06rem;
+    }
+  }
+
+  .cart {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    margin-right: 1rem;
+
+    .quantity {
+      p {
+        color: #a0a0a0;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 1rem auto 2rem;
+
+    .contact {
+      margin-left: 0;
+      font-size: 0.9rem;
+    }
+
+    .logo {
+      h3 {
+        font-size: 2.5rem;
+      }
+    }
+
+    .cart {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+  header {
+    .logo {
+      h3 {
+        font-size: 1.9rem;
+      }
+    }
+  }
+}
