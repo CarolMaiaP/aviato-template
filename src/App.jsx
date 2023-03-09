@@ -16,6 +16,7 @@ function App() {
           <Route path="/" element={<Home />}/>
           <Route path="/categoria" element={<Category />}/>
           <Route path="/produto" element={<Product />}/>
+          <Route path="/*" element={<div className="not-found"><h1>Page not found</h1></div>}/>
         </Routes>
         <Footer />
       </Router>
