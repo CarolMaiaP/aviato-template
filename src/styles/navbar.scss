@@ -1,0 +1,24 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+
+  ul {
+    display: flex;
+    list-style: none;
+    gap: 4rem;
+
+    li {
+      a {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 300;
+        color: #333;
+
+        &:hover {
+          color: #000;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
