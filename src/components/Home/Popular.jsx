@@ -28,8 +28,10 @@ export function Popular(){
               return(
                 <div className="product" key={product.id}>
                   <img src={product.photo} alt={product.name} />
-                  <h4>{product.name}</h4>
-                  <p>R$ {product.price}</p>
+                  <div className="infos">
+                    <h4>{product.name}</h4>
+                    <p><strong>R$ {product.price}</strong></p>
+                  </div>
                 </div>
               )
             })}
