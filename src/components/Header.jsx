@@ -1,5 +1,6 @@
 import { GiPhone } from 'react-icons/gi'
 import { SlBag } from 'react-icons/sl'
+import { Link } from 'react-router-dom'
 import '../styles/header.scss'
 
 export function Header(){
@@ -10,10 +11,10 @@ export function Header(){
         <p>4191 4399</p>
       </div>
       <div className="logo">
-        <h3>Aviato</h3>
+        <h3><Link to="/">Aviato</Link></h3>
       </div>
       <div className="cart">
-        <SlBag size={24} />
+        <SlBag size={20} />
         <div className="quantity">
           <p>(0) - </p>
         </div>
