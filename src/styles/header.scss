@@ -22,9 +22,13 @@ header {
     h3 {
       font-family: "Times New Roman", Times, serif;
       text-transform: uppercase;
-      color: #333;
       font-size: 1.4rem;
       letter-spacing: 0.06rem;
+
+      a {
+        text-decoration: none;
+        color: #333;
+      }
     }
   }
 
