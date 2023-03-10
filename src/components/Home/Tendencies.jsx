@@ -1,4 +1,7 @@
 import { MdKeyboardArrowRight } from 'react-icons/md'
+import productImage1 from '../../assets/500x300.png'
+import productImage2 from '../../assets/500x300.png'
+import productImage3 from '../../assets/500x600.png'
 
 export function Tendencies(){
   return(
@@ -10,7 +13,7 @@ export function Tendencies(){
         <div className="images">
           <div className="first-images">
             <div className="product">
-              <img src="https://via.placeholder.com/500x300" alt="" />
+              <img src={productImage1} alt="Men Dresses" />
             
               <div className="product-infos">
                 <h4>Men Dresses</h4>
@@ -18,7 +21,7 @@ export function Tendencies(){
               </div>
             </div>
             <div className="product">
-              <img src="https://via.placeholder.com/500x300" alt="" />
+              <img src={productImage2} alt="Jewellery" />
 
               <div className="product-infos">
                 <h4>Jewellery</h4>
@@ -26,8 +29,8 @@ export function Tendencies(){
               </div>
             </div>
           </div>
-          <div className="product">
-            <img src="https://via.placeholder.com/500x600" alt="" />
+          <div className="highlight-product">
+            <img src={productImage3} alt="Women Dresses" />
 
             <div className="product-infos">
                 <h4>Women Dresses</h4>
