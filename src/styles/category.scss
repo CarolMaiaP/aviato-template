@@ -205,6 +205,11 @@
 
 @media (min-width: 701px) and (max-width: 1024px) {
   .category-products {
+    .products-top-bar {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
     .products {
       grid-template-columns: repeat(2, 1fr);
     }
