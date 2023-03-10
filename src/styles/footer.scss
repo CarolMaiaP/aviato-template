@@ -23,7 +23,7 @@ footer {
             color: #222;
             text-transform: uppercase;
             letter-spacing: 0.04rem;
-            font-size: 0.94rem;
+            font-size: 0.8rem;
             font-weight: 500;
           }
         }
@@ -79,10 +79,11 @@ footer {
       list-style: none;
       display: flex;
       gap: 2rem;
-      font-size: 0.9rem;
+      font-size: 0.8rem;
 
       li {
         text-transform: uppercase;
+        cursor: pointer;
       }
     }
 
@@ -123,5 +124,11 @@ footer {
 @media (min-width: 701px) and (max-width: 1024px) {
   footer {
     padding: 3rem;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1500px) {
+  footer {
+    padding: 7rem;
   }
 }
