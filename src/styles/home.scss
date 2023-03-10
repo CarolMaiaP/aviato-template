@@ -1,5 +1,32 @@
 .swiper {
   margin-top: 2rem;
+
+  .swiper-button-prev {
+    background-image: url(/src/assets/icon-arrow-left.svg);
+    background-repeat: no-repeat;
+    background-size: 70% auto;
+    background-position: center;
+    padding: 1rem 1.5rem;
+    background-color: #fff;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .swiper-button-next {
+    background-image: url(/src/assets/icon-arrow-right.svg);
+    background-repeat: no-repeat;
+    background-size: 70% auto;
+    background-position: center;
+    padding: 1rem 1.5rem;
+    background-color: #fff;
+
+    &::after {
+      display: none;
+    }
+  }
+
   .swiper-wrapper {
     .swiper-slide {
       img {
@@ -42,7 +69,7 @@
   h3 {
     text-transform: uppercase;
     color: #333;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     letter-spacing: 0.06rem;
   }
 }
@@ -55,12 +82,20 @@
     display: flex;
     gap: 1rem;
 
-    .product {
+    .highlight-product {
       position: relative;
+      display: flex;
+      justify-content: center;
+
+      img {
+        height: 100%;
+        max-width: 100%;
+      }
 
       .product-infos {
         position: absolute;
         top: 0;
+        left: 0;
         padding: 2.7rem;
         display: flex;
         flex-direction: column;
@@ -88,6 +123,10 @@
 
       .product {
         position: relative;
+
+        img {
+          height: 100%;
+        }
 
         .product-infos {
           position: absolute;
@@ -121,6 +160,38 @@
     grid-template-columns: repeat(4, 1fr);
     max-width: 70%;
     margin: 0 auto;
+    place-items: center;
+
+    .product {
+      cursor: pointer;
+
+      &:hover {
+        .infos {
+          border: 1px solid #ddd;
+          border-top: 0;
+        }
+      }
+
+      .infos {
+        padding: 0.5rem 0.6rem;
+        margin-bottom: 3rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        border: 1px solid transparent;
+        border-top: 0;
+        transition: all 0.2s;
+
+        h4 {
+          color: #808080;
+          font-weight: 500;
+        }
+
+        p {
+          color: #383838;
+        }
+      }
+    }
   }
 
   .show-more-button {
@@ -129,7 +200,6 @@
     width: 15%;
     margin: 0 auto;
     transition: background-color 0.2s;
-    margin-top: 3rem;
 
     button {
       background-color: transparent;
@@ -149,14 +219,55 @@
 }
 
 @media (max-width: 700px) {
+  .swiper {
+    .swiper-wrapper {
+      .swiper-slide {
+        .banner-infos {
+          h3 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+          }
+
+          p {
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            max-width: 80%;
+          }
+
+          .button {
+            button {
+              padding: 0.3rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
   .highlight {
     .images {
       flex-direction: column;
       width: 90%;
+
+      .first-images {
+        align-items: center;
+      }
+
+      .product {
+        img {
+          max-width: 100%;
+        }
+      }
     }
   }
 
   .popular-clothes {
+    .products {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
     .show-more-button {
       width: 50%;
     }
@@ -164,16 +275,61 @@
 }
 
 @media (min-width: 701px) and (max-width: 1024px) {
+  .swiper {
+    .swiper-wrapper {
+      .swiper-slide {
+        .banner-infos {
+          h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+          }
+
+          p {
+            margin-bottom: 3rem;
+            font-size: 1rem;
+            max-width: 80%;
+          }
+
+          .button {
+            button {
+              padding: 0.3rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
   .highlight {
     .images {
       flex-direction: column;
       margin: 0 auto;
+
+      .first-images {
+        align-items: center;
+      }
     }
   }
 
   .popular-clothes {
+    .products {
+      grid-template-columns: repeat(2, 1fr);
+
+      .product {
+        margin: 0 auto;
+      }
+    }
+
     .show-more-button {
       width: 25%;
+    }
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1500px) {
+  .popular-clothes {
+    .products {
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 }
